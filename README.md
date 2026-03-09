@@ -1,7 +1,7 @@
 # Progetto Lavoratori - Piattaforma Multi-Stack
 
 ## 1. Panoramica
-`Progetto Lavoratori` e una piattaforma dimostrativa che integra piu tecnologie applicative in un unico ecosistema:
+`Progetto Lavoratori` e una piattaforma dimostrativa che integra più tecnologie applicative in un unico ecosistema:
 
 - Frontend/server `Node.js` (Express + Jade)
 - Backend `PHP` con `MySQL`
