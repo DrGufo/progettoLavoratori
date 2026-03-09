@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "65f04852f91796625764d390"
+  },
+  "titolo": "Primo post",
+  "contenuto": "Questo è il contenuto del primo post",
+  "immagine": "en_what-is-a-blog-1.png",
+  "commenti": [
+    "questo è un commento"
+  ],
+  "risposte": [
+    "questa è una risposta"
+  ]
+}]

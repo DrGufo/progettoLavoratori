@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/assistenza.js')
+  body
+    div.container
+      div.header-buttons
+        button#button1(onclick="window.location.href='http://localhost/php/EsercizioLavoratori/homepage.php?status=logged&username=' + '#{username}'") Vai al sito
+        button#button2(onclick="window.location.href='http://localhost:3020?username='+ '#{username}'") Vai al blog
+    
+      div.msg-header(style="margin-top: 40px;")
+        div.container1
+          img(src="/images/assistente.png" class="msgimg")
+          div.active
+            p Assistenza
+
+      div.chat-page
+        div.msg-inbox
+          div.chats
+            div#msgPg.msg-page
+              
+          div.msg-bottom
+            div.input-group
+              input#text.form-control(type='text', placeholder='Write message...')
+              button#b1.btn.btn-primary
+                img(src='/images/button.png')

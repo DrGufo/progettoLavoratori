@@ -1,0 +1,26 @@
+block content
+  head
+    title Pannello di controllo interventi attivi
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  div.header-buttons
+    button#button1(onclick="window.location.href='http://localhost:3020/admin'") Vai alla gestione del Blog
+    button#button2(onclick="window.location.href='http://localhost:3200/operatore'") Vai alla chat
+    button#button3(onclick="window.location.href='http://localhost:3010'") Vai alla visualizzazione degli interventi in arrivo
+
+  div(id='content')
+    h1 Pannello di controllo interventi attivi
+
+    table#tabellaInterventi
+        thead
+            tr
+                th Nome utente
+                th Nome lavoratore
+                th Cognome lavoratore
+                th Mansione
+                th Data inizio
+                th Ora inizio 
+                th Data fine
+                th Ora fine
+        tbody#bodyInterventi
+    
+  script(src='/javascripts/jsInterventi.js')

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div.header-buttons
+    button#button1(onclick="window.location.href='http://localhost:3020/admin'") Vai alla gestione del Blog
+    button#button2(onclick="window.location.href='http://localhost:3200/operatore'") Vai alla chat
+    button#button3(onclick="window.location.href='http://localhost:3010/interventi'") Vai a lavori in corso
+  div(id='content')
+    h1 Pannello di controllo interventi
+    
+  #content
+      p#text
+  
+  script(src='/javascripts/js.js')

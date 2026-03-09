@@ -1,0 +1,46 @@
+doctype html
+html(lang='it')
+    head
+        title Blog
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        div.header-buttons
+            button#button1(onclick="window.location.href='http://localhost/php/EsercizioLavoratori/homepage.php?status=logged&username=' + '#{username}'") Vai al sito
+            button#button2(onclick="window.location.href='http://localhost:3200/assistenza?username='+ '#{username}'") Hai bisogno di assistenza?
+        h1 Visualizzazione dei post
+        
+        div#content
+            if(posts && posts.length > 0)
+                each post, index in posts
+                    div#div
+                        article
+                            h1 #{post.titolo}
+                            p #{post.contenuto}
+                            img(src='./images/' + post.immagine)
+                            br
+                            br
+                            h3 Commenti:
+                            if(post.commenti && post.commenti.length > 0)
+                                each commento in post.commenti
+                                    p=commento
+                            else 
+                                p Nessun commento 
+                            form(action='/commenta?username='+username, method='post')
+                                div
+                                    label Commento:
+                                    input(type='text', name='commento', id='commento')
+                                div
+                                    input(type='hidden', name='id', value=post._id, id='inputIdPost')
+                                    br
+                                    input(type='submit', value='Commenta', id='button')
+                            br
+                            br
+                            br
+                            h3 Risposte ai commenti:
+                            if post.risposte && post.risposte.length > 0
+                                each risposta in post.risposte
+                                    p= risposta
+                            else    
+                                p Nessuna risposta presente
+            else
+                p Nessun post

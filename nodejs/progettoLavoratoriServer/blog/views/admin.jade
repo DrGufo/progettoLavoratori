@@ -1,0 +1,48 @@
+extends layout
+
+block content 
+    div.header-buttons
+        button#button1(onclick="window.location.href='http://localhost:3010/'") Vai al pannello di controllo
+        button#button2(onclick="window.location.href='http://localhost:3200/operatore'") Vai alla chat
+        button#button3(onclick="window.location.href='http://localhost:3010/interventi'") Vai a lavori in corso
+    h1 Gestione blog
+    
+    section#central
+        section#left            
+            div(id='div')
+                h1 Pubblica un post
+                form(method='post', action='/admin' enctype='multipart/form-data')
+                    label(for='titolo') Titolo:
+                    input(type='text', name='titolo', id='titolo')
+                    br
+                    br
+                    label(for='contenuto') Contenuto:
+                    textarea(name='contenuto', id='contenuto')
+                    br
+                    br
+                    label(for='immagine') Immagine:
+                    input(type='file', name='immagine', id='immagine')
+                    br
+                    br
+                    input(type='submit', value='Pubblica', id='button')
+
+        section#right
+            div(id='div')
+                h1 Commenti inseriti
+                if data && data.length > 0
+                    each post in data
+                        if post.commenti && post.commenti.length > 0
+                            each commento in post.commenti
+                                p= commento + " - " + post.titolo
+                                br
+                                form(id="formRisposta", action="/risposta", method="post")
+                                    div
+                                        label(for="risposta") Risposta:
+                                        input(type="text", name="risposta", id="risposta")
+                                    div
+                                        input(type="hidden", name="id", value=post._id, id="inputIdPost")
+                                        br
+                                        input(type="submit", value="Invio", id='button')
+                                hr
+                        else
+                            p Nessun commento presente

@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "69ae949473db0574d24c6ba2"
+  },
+  "nomeUtente": "mario",
+  "nomeLavoratore": "Elettricista3",
+  "cognomeLavoratore": "Verdi",
+  "mansione": "installazione di impianti di allarme",
+  "via": "via mortara",
+  "civico": "13",
+  "citta": "ferrara",
+  "giornoInizio": "09",
+  "meseInizio": "03",
+  "annoInizio": "2026",
+  "oraInizio": "10",
+  "minutiInizio": "36",
+  "giornoFine": "09",
+  "meseFine": "03",
+  "annoFine": "2026",
+  "oraFine": "10",
+  "minutiFine": "40"
+}]

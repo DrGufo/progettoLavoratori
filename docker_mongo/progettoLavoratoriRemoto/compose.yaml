@@ -1,0 +1,15 @@
+services:
+  dbBlog:
+    image: mongo:5
+    hostname: dbBlog
+    container_name: dbBlog
+    ports:
+      - 27019:27017
+    entrypoint: ["mongod", "--bind_ip", "localhost,dbBlog"]
+  dbPrenotazioni:
+    image: mongo:5
+    hostname: dbPrenotazioni
+    container_name: dbPrenotazioni
+    ports:
+      - 27020:27017
+    entrypoint: ["mongod", "--bind_ip", "localhost,dbPrenotazioni"]
