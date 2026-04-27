@@ -1,7 +1,7 @@
 # Progetto Lavoratori - Piattaforma Multi-Stack
 
 ## 1. Panoramica
-`Progetto Lavoratori` e una piattaforma dimostrativa che integra più tecnologie applicative in un unico ecosistema:
+`Progetto Lavoratori` è una piattaforma dimostrativa che integra più tecnologie applicative in un unico ecosistema:
 
 - Frontend/server `Node.js` (Express + Jade)
 - Backend `PHP` con `MySQL`
@@ -12,7 +12,7 @@
 Il progetto simula un contesto di prenotazione interventi professionali (idraulici, elettricisti, muratori), con funzionalita di blog, assistenza chat e pannello operativo amministrativo.
 
 ## 2. Architettura Applicativa
-La soluzione e composta da tre macro-aree:
+La soluzione è composta da tre macro-aree:
 
 - `php_sql/EsercizioLavoratori`: portale utente (login, prenotazione, schedulazione) e backend PHP per logica SQL.
 - `nodejs/progettoLavoratoriServer`: microservizi Node.js per gestione prenotazioni realtime, pannello admin e blog.
@@ -42,7 +42,7 @@ Per eseguire il progetto in ambiente locale Windows:
 ## 4. Setup Dati
 
 ### 4.1 Import SQL (MySQL)
-Il dump SQL completo e in:
+Il dump SQL completo è in:
 
 - `php_sql/db/eserciziolavoratori.extracted.sql`
 
@@ -170,7 +170,7 @@ Funzioni:
 - Utente: `http://localhost:3200/assistenza?username=<utente>`
 - Operatore: `http://localhost:3200/operatore`
 
-La messaggistica e mediata dal broker WebSocket su porta `8081`, che effettua l'associazione tra richieste utenti e operatori disponibili.
+La messaggistica è mediata dal broker WebSocket su porta `8081`, che effettua l'associazione tra richieste utenti e operatori disponibili.
 
 ### 8.5 Pannello Operativo Admin
 - Dashboard principale: `http://localhost:3010`
@@ -201,9 +201,9 @@ php_sql/
 ```
 
 ## 10. Note Tecniche
-- Il file `docker_mongo/progettoLavoratoriRemoto/Dockerfile` e un template Docker generico e non e utilizzato dal `compose.yaml` corrente.
-- Il progetto e stato impostato per ambiente locale con hostname `localhost` e porte fisse.
-- Alcuni riferimenti a route e naming DB nel codice sono sensibili alla configurazione del sistema operativo (case sensitivity su Linux). In ambiente Windows locale il comportamento e generalmente tollerante.
+- Il file `docker_mongo/progettoLavoratoriRemoto/Dockerfile` è un template Docker generico e non è utilizzato dal `compose.yaml` corrente.
+- Il progetto è stato impostato per ambiente locale con hostname `localhost` e porte fisse.
+- Alcuni riferimenti a route e naming DB nel codice sono sensibili alla configurazione del sistema operativo (case sensitivity su Linux). In ambiente Windows locale il comportamento è generalmente tollerante.
 
 ## 11. Licenza
 Repository sviluppato a scopo didattico e dimostrativo portfolio.
